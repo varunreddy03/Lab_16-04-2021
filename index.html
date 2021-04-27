@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web App</title>
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+  <script src="myApp.js"></script>
+  <style>
+    .container{
+      padding-top: 10vh;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 class="text-center">Student Details</h2>
+    <form>
+      <label>Name:</label>
+      <input type="text" id="name" placeholder="Enter Name"><br>
+      <label>Branch:</label>
+      <input type="text" id="branch" placeholder="Enter Branch"><br>
+      <label>Rollno:</label>
+      <input type="text" id="rollno" placeholder="Enter Rollno"><br>
+      <input type="button" onclick="createStudent()" value="Submit">
+      <input type="button" onclick="updateStudent()" value="update">
+      <input type="button" onclick="deleteStudent()" value="delete">
+      <input type="button" onclick="display()" value="display">
+    </form>
+    <br><br>
+    <div id="students">
+
+    </div>
+  </div>
+</body>
+</html>
